@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin-Auswertung</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1><a href="index.html">Umfragen@LEG</a></h1>
+    <a class="btn btn-secondary" href="admin.html">Admin</a>
+  </header>
+
+  <main class="container">
+    <section id="admin-login-card" class="card">
+      <h2>Admin-Login</h2>
+      <p class="muted">Bitte Passwort eingeben, um die Auswertung zu sehen.</p>
+      <form id="admin-login-form" class="inline-form">
+        <input id="admin-password" type="password" placeholder="Admin-Passwort" required />
+        <button type="submit" class="btn btn-primary">Einloggen</button>
+      </form>
+      <div id="admin-login-feedback" class="feedback"></div>
+    </section>
+
+    <section id="admin-content" class="hidden">
+      <section class="card">
+        <div class="admin-toolbar">
+          <div>
+            <label for="admin-survey-select"><strong>Umfrage auswählen</strong></label>
+            <select id="admin-survey-select"></select>
+          </div>
+          <div class="admin-actions">
+            <button id="admin-export-pdf-btn" class="btn btn-primary" type="button">PDF exportieren</button>
+            <button id="admin-logout-btn" class="btn btn-secondary" type="button">Logout</button>
+          </div>
+        </div>
+        <p id="response-count" class="muted"></p>
+      </section>
+
+      <section id="admin-results" class="results"></section>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script type="module" src="src/adminPage.js"></script>
+</body>
+</html>

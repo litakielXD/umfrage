@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umfrage</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1><a href="index.html">Umfragen@LEG</a></h1>
+    <a class="btn btn-secondary" href="admin.html">Admin</a>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 id="survey-title"></h2>
+      <p id="survey-description" class="muted"></p>
+      <form id="survey-form"></form>
+      <div id="form-feedback" class="feedback"></div>
+    </section>
+  </main>
+
+  <script type="module" src="src/surveyPage.js"></script>
+</body>
+</html>

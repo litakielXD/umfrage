@@ -1,0 +1,300 @@
+:root {
+  --bg: #f6f9fc;
+  --card: #ffffff;
+  --text: #162029;
+  --muted: #5d6d7c;
+  --accent: #1c7ed6;
+  --accent-dark: #1565aa;
+  --border: #dce7f2;
+  --ok: #2f9e44;
+  --shadow: 0 10px 24px rgba(8, 34, 61, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #dfe9f2;
+  background-image: url("bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(120deg, #0b5394, #1c7ed6);
+  color: #fff;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+}
+
+.topbar h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar h1 a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: min(980px, 92vw);
+  margin: 1.4rem auto 2rem;
+}
+
+.card,
+.survey-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.card {
+  padding: 1.25rem 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.survey-card {
+  padding: 1rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #093f70;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.inline-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.inline-form input[type="password"] {
+  max-width: 320px;
+}
+
+.admin-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.6rem;
+  border: 0;
+  margin: 0;
+  padding: 0.85rem 0.9rem;
+  border-radius: 12px;
+  background: #fbfdff;
+  border: 1px solid #e3edf7;
+}
+
+.field legend {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.optional-hint {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.95em;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #c4d3e1;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+}
+
+.short-input {
+  width: 120px !important;
+}
+
+.likert {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.rating-wrap {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.rating-labels {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+.rating-scale {
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.rating-scale label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.95rem;
+}
+
+.matrix-wrap {
+  overflow-x: auto;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.matrix-table th,
+.matrix-table td {
+  border: 1px solid #d8e3ef;
+  padding: 0.55rem 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.matrix-table thead th {
+  background: #eef5fb;
+  font-weight: 600;
+}
+
+.matrix-table thead th:first-child {
+  text-align: left;
+}
+
+.matrix-table tbody th {
+  text-align: left;
+  min-width: 280px;
+  background: #fafcff;
+  font-weight: 400 !important;
+}
+
+.matrix-radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback {
+  margin-top: 0.8rem;
+  min-height: 1.2rem;
+}
+
+.feedback.success {
+  color: var(--ok);
+}
+
+.results {
+  display: grid;
+  gap: 1rem;
+}
+
+.chart-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.comment-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1rem;
+}
+
+.empty {
+  background: #fff;
+  border: 1px dashed #9db4cc;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+@media (max-width: 760px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .field {
+    padding: 0.75rem;
+  }
+
+  .matrix-table {
+    min-width: 640px;
+  }
+
+  .rating-scale {
+    justify-content: flex-start;
+  }
+}
